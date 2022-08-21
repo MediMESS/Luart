@@ -3,6 +3,8 @@ module.exports = {
   extends: [
     "plugin:react/recommended", // Uses the recommended rules from @eslint-plugin-react
     "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+    "plugin:jsdoc/recommended",
+    "prettier",
     "plugin:prettier/recommended", // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ],
   parserOptions: {
@@ -12,11 +14,15 @@ module.exports = {
       jsx: true, // Allows for the parsing of JSX
     },
   },
-  plugins: ["@typescript-eslint"],
+  plugins: ["@typescript-eslint", "prettier"],
   rules: {
     "no-console": "warn",
     "@typescript-eslint/no-unused-vars": "warn",
-    "prettier/prettier": ["warn", { semi: false }],
+    "jsdoc/require-returns-type": 0,
+    "jsdoc/require-param-type": 0,
+    "jsdoc/require-description-complete-sentence": "warn",
+    "jsdoc/require-description": "warn",
+    "prettier/prettier": ["error", { semi: false }],
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     // e.g. "@typescript-eslint/explicit-function-return-type": "off",
   },
