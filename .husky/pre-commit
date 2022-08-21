@@ -2,4 +2,5 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 yarn run lint --max-warnings 0
-npx tsc --pretty --skipLibCheck
+npx tsc --skipLibCheck
+# exit 1 # Test pre-commit, Abort commit

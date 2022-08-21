@@ -10,7 +10,8 @@
 
 # production
 /build
-
+# ts file
+tsconfig.tsbuildinfo
 # misc
 .DS_Store
 .env.local
