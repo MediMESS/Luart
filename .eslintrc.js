@@ -17,7 +17,9 @@ module.exports = {
   plugins: ["@typescript-eslint", "prettier"],
   rules: {
     "no-console": "warn",
+    "react/display-name": "off",
     "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-empty-function": "off",
     "jsdoc/require-returns-type": 0,
     "jsdoc/require-param-type": 0,
     "jsdoc/require-description-complete-sentence": "warn",
