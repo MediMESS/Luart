@@ -7,7 +7,6 @@ import Drawer from "@mui/material/Drawer"
 import NavLinkAdapter from "src/components/NavLinkAdapter"
 import { MobileNavbarDrawerProps } from "./Navbar"
 import Toolbar from "@mui/material/Toolbar"
-import { capitalize } from "@mui/material"
 
 const MobileNavbarDrawer = (props: MobileNavbarDrawerProps) => {
   return (
@@ -15,13 +14,25 @@ const MobileNavbarDrawer = (props: MobileNavbarDrawerProps) => {
       {...props}
       hideBackdrop
       anchor="bottom"
-      PaperProps={{ sx: { height: "100vh" } }}
+      PaperProps={{
+        sx: {
+          height: "100vh",
+          backgroundColor: "background.default",
+        },
+      }}
     >
       <Toolbar />
       <List>
         {pages.map(({ href, label }) => (
           <ListItem component={NavLinkAdapter} to={href} key={href}>
-            <Typography textAlign="center">{capitalize(label)}</Typography>
+            <Typography
+              textAlign="center"
+              sx={{
+                color: "text.primary",
+              }}
+            >
+              {label}
+            </Typography>
           </ListItem>
         ))}
       </List>

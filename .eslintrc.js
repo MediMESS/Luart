@@ -21,10 +21,28 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-empty-function": "off",
     "jsdoc/require-returns-type": 0,
-    "jsdoc/require-param-type": 0,
+    "jsdoc/require-param-type": "warn",
     "jsdoc/require-description-complete-sentence": "warn",
     "jsdoc/require-description": "warn",
-    "prettier/prettier": ["error", { semi: false }],
+    "prettier/prettier": [
+      "error",
+      {
+        semi: false,
+        "require-jsdoc": [
+          "error",
+          {
+            require: {
+              FunctionDeclaration: true,
+              MethodDefinition: false,
+              ClassDeclaration: false,
+              ArrowFunctionExpression: false,
+              FunctionExpression: false,
+            },
+          },
+        ],
+      },
+    ],
+
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     // e.g. "@typescript-eslint/explicit-function-return-type": "off",
   },

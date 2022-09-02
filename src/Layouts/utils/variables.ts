@@ -8,7 +8,7 @@ export const pages = [
     href: "marketplace",
   },
   {
-    label: "$Luart",
+    label: "App $LUART",
     href: "$luart",
   },
   {
@@ -18,5 +18,9 @@ export const pages = [
   {
     label: "Activity",
     href: "activity",
+  },
+  {
+    label: "My Items",
+    href: "account/owned",
   },
 ]
