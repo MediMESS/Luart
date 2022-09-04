@@ -5,33 +5,8 @@ import Container from "@mui/material/Container"
 import Grid from "@mui/material/Grid"
 import Button from "@mui/material/Button"
 import NavLinkAdapter from "src/components/NavLinkAdapter"
-import { ReactComponent as DiscordIcon } from "src/features/Launchpad/assets/Discord.svg"
-import { ReactComponent as MediumIcon } from "src/features/Launchpad/assets/Medium.svg"
-import { ReactComponent as TelegramIcon } from "src/features/Launchpad/assets/Telegram.svg"
-import TwitterIcon from "@mui/icons-material/Twitter"
-import SvgIcon from "@mui/material/SvgIcon"
 import NewsletterSubscriptionCard from "src/features/Launchpad/components/NewsletterSubscriptionCard"
-import Link from "@mui/material/Link"
-
-const luartSocialMediaList = [
-  {
-    href: "https://t.me/luart_io",
-    component: TelegramIcon,
-  },
-  {
-    href: "https://twitter.com/luart_io",
-    component: TwitterIcon,
-  },
-  {
-    href: "https://luart-io.medium.com/",
-    component: MediumIcon,
-  },
-  {
-    href: "https://discord.com/invite/luart",
-    component: DiscordIcon,
-  },
-]
-
+import SocialMediaList from "src/Layouts/components/SocialMediaList"
 const Launchpad = () => {
   return (
     <Layout showBackground>
@@ -102,18 +77,7 @@ const Launchpad = () => {
             display: { xs: "none", md: "flex" },
           }}
         >
-          {luartSocialMediaList.map(({ component, href }) => (
-            <Link key={href} href={href} target="_blank">
-              <SvgIcon
-                width={27}
-                height={27}
-                sx={{
-                  margin: { xs: "8px 0px 0px 0px", md: "0px 32px 0px 0px" },
-                }}
-                component={component}
-              />
-            </Link>
-          ))}
+          <SocialMediaList />
         </Box>
         <NewsletterSubscriptionCard />
       </Container>

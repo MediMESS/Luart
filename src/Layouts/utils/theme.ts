@@ -82,6 +82,13 @@ export const theme = createTheme({
         },
       },
     },
+    MuiList: {
+      styleOverrides: {
+        root: {
+          padding: 0,
+        },
+      },
+    },
   },
   palette: {
     primary: {

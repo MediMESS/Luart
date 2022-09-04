@@ -39,7 +39,7 @@ const Navbar = ({ isBlur }: NavbarProps) => {
           minHeight: "70px",
         }}
       >
-        <Container maxWidth="lg" sx={{ px: "16px" }}>
+        <Container maxWidth="lg" sx={{ px: "24px", height: "100%" }}>
           <Toolbar
             disableGutters
             sx={{

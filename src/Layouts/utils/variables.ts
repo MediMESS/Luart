@@ -1,7 +1,7 @@
 export const pages = [
   {
     label: "Launchpad",
-    href: "launchpad",
+    href: "/",
   },
   {
     label: "Marketplace",
@@ -13,7 +13,7 @@ export const pages = [
   },
   {
     href: "all-collections",
-    label: "All Collection",
+    label: "All Collections",
   },
   {
     label: "Activity",
