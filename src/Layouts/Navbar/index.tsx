@@ -14,8 +14,9 @@ import MenuIcon from "@mui/icons-material/Menu"
 import CloseIcon from "@mui/icons-material/Close"
 import MobileNavbarDrawer from "./MobileNavbarDrawer"
 import NavLinkAdapter from "src/components/NavLinkAdapter"
+import { NavbarProps } from "./Navbar.d"
 
-const Navbar = () => {
+const Navbar = ({ isBlur }: NavbarProps) => {
   const [isNavbarDrawerOpen, setIsNavbarDrawerOpen] =
     React.useState<boolean>(false)
 
@@ -25,7 +26,14 @@ const Navbar = () => {
         position="static"
         sx={{
           zIndex: (theme) => theme.zIndex.drawer + 1,
-          backgroundColor: "rgb(38, 44, 74)",
+          backgroundColor: {
+            xs: "rgb(38, 44, 74)",
+            md: isBlur ? "background.paper" : "rgb(38, 44, 74)",
+          },
+          backdropFilter: {
+            xs: "none",
+            md: isBlur ? "blur(64px)" : "none",
+          },
           color: "text.primary",
           display: "flex",
           minHeight: "70px",

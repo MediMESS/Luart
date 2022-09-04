@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "src/Layouts"
+import Launchpad from "src/features/Launchpad"
 
 /**
  * App Component.
@@ -8,9 +8,9 @@ import Layout from "src/Layouts"
  */
 function App() {
   return (
-    <div className="App">
-      <Layout />
-    </div>
+    <>
+      <Launchpad />
+    </>
   )
 }
 

@@ -16,6 +16,14 @@ export const theme = createTheme({
     fontWeightMedium: 700,
   },
   components: {
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          border: "1px solid rgba(255, 255, 255, 0.11)",
+          borderRadius: "8px",
+        },
+      },
+    },
     MuiButton: {
       defaultProps: {
         disableRipple: true,
@@ -26,6 +34,7 @@ export const theme = createTheme({
           borderRadius: "6px",
           boxShadow: "none",
           padding: "12px 24px",
+          fontSize: "1rem",
           "&:hover, &:focus": {
             boxShadow: "none",
           },
@@ -37,7 +46,11 @@ export const theme = createTheme({
             backgroundColor: "#2E9370",
           },
         },
+        contained: {
+          fontWeight: "600",
+        },
         text: {
+          fontWeight: "600",
           "&:hover": {
             background: "none",
           },
