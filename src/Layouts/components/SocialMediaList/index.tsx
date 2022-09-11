@@ -10,7 +10,7 @@ export const luartSocialMediaList = [
   {
     href: "https://t.me/luart_io",
     component: TelegramIcon,
-    sx: { width: "30px", height: "30px" },
+    sx: { width: "29px", height: "29px" },
   },
   {
     href: "https://twitter.com/luart_io",
@@ -28,25 +28,18 @@ export const luartSocialMediaList = [
     sx: { width: "24px", height: "24px" },
   },
 ]
+
 const index = () => {
   return (
     <>
-      {luartSocialMediaList.map(({ component, href, sx }, index) => (
+      {luartSocialMediaList.map(({ component, href, sx }) => (
         <Link
           key={href}
           href={href}
           target="_blank"
           sx={{ display: "flex", alignItems: "center" }}
         >
-          <SvgIcon
-            sx={[
-              { ...sx },
-              index !== 0 && {
-                margin: "0px 0px 0px 32px",
-              },
-            ]}
-            component={component}
-          />
+          <SvgIcon sx={{ ...sx, margin: "0px 18px" }} component={component} />
         </Link>
       ))}
     </>

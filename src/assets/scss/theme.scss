@@ -1,0 +1,28 @@
+@import "src/assets/scss/media";
+@import "src/assets/scss/colors";
+
+.MuiContainer-root {
+  &.MuiContainer-maxWidthLg {
+    @include xl {
+      max-width: 1352px;
+    }
+    @include md {
+      padding: 0px 16px;
+    }
+    padding: 0px 24px;
+    max-width: 1170px;
+  }
+}
+
+.MuiPaper-root {
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 8px;
+}
+
+.MuiList-root {
+  padding: 0;
+}
+
+.MuiTouchRipple-root {
+  display: none;
+}

@@ -1,0 +1,25 @@
+@import "src/assets/scss/breakpoints";
+
+// Tablets and small screens.
+@mixin md {
+  @media (min-width: $screen-md) {
+    // Add the styles in here
+    @content;
+  }
+}
+
+// Large Screens
+@mixin lg {
+  @media (min-width: $screen-lg) {
+    // Add the styles in here
+    @content;
+  }
+}
+
+// Large Screens
+@mixin xl {
+  @media (min-width: $screen-xl) {
+    // Add the styles in here
+    @content;
+  }
+}

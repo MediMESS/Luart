@@ -28,26 +28,25 @@ const MobileNavbarDrawer = (props: MobileNavbarDrawerProps) => {
       <Toolbar sx={{ height: "70px" }} />
       <Box
         sx={{
-          padding: "36px",
-          paddingTop: "26px",
+          padding: "25px 39px 82px",
           display: "flex",
           flexGrow: "1",
           justifyContent: "space-between",
           flexDirection: "column",
         }}
       >
-        <List>
+        <List sx={{ p: 0 }}>
           {pages.map(({ href, label }) => (
             <ListItem
               component={NavLinkAdapter}
               to={href}
               key={href}
-              sx={{ mb: "32px", p: 0 }}
+              sx={{ mb: "24px", p: 0 }}
             >
               <MuiLink
                 to={href}
                 component={NavLinkAdapter}
-                sx={{ fontSize: "22px" }}
+                sx={{ fontSize: "22px", lineHeight: "34px", fontWeight: "700" }}
               >
                 {label}
               </MuiLink>
@@ -58,7 +57,7 @@ const MobileNavbarDrawer = (props: MobileNavbarDrawerProps) => {
           sx={{
             display: "flex",
             justifyContent: "center",
-            marginBottom: "64px",
+            mb: "12px",
           }}
         >
           <SocialMediaList />

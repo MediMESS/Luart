@@ -1,0 +1,33 @@
+@import "src/assets/scss/media";
+@import "src/assets/scss/colors";
+
+.Navbar {
+  .btn-m {
+    @include lg {
+      margin: 0 0 0 32px;
+    }
+    @include md {
+      margin: 0 0 0 24px;
+    }
+    margin: 0 0 0 16px;
+  }
+
+  .logo {
+    width: 82px;
+    margin-top: 2px;
+    @include md {
+      width: 108px;
+      height: 42px;
+    }
+  }
+  .ConnectWalletButton {
+    & > svg {
+      margin-left: -4px;
+      width: 20px;
+      height: 16px;
+      margin-right: 8px;
+      stroke-width: 20px;
+      stroke: $primaryContrastText;
+    }
+  }
+}

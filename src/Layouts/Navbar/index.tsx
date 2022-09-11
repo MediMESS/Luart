@@ -15,13 +15,13 @@ import CloseIcon from "@mui/icons-material/Close"
 import MobileNavbarDrawer from "./MobileNavbarDrawer"
 import NavLinkAdapter from "src/components/NavLinkAdapter"
 import { NavbarProps } from "./Navbar.d"
+import "./Navbar.scss"
 
 const Navbar = ({ isBlur }: NavbarProps) => {
-  const [isNavbarDrawerOpen, setIsNavbarDrawerOpen] =
-    React.useState<boolean>(false)
+  const [isNavbarDrawerOpen, setIsNavbarDrawerOpen] = React.useState(false)
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex" }} className="Navbar">
       <AppBar
         position="static"
         sx={{
@@ -34,55 +34,69 @@ const Navbar = ({ isBlur }: NavbarProps) => {
             xs: "none",
             md: isBlur ? "blur(64px)" : "none",
           },
+          borderRadius: 0,
+          border: "none",
           color: "text.primary",
           display: "flex",
           minHeight: "70px",
         }}
       >
-        <Container maxWidth="lg" sx={{ px: "24px", height: "100%" }}>
+        <Container maxWidth={"lg"} sx={{ height: "100%" }}>
           <Toolbar
             disableGutters
             sx={{
               height: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
             }}
           >
-            <Logo />
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <List
-                sx={{
-                  display: { xs: "none", md: "flex" },
-                  flexGrow: 1,
-                }}
-              >
-                {pages.map(({ href, label }) => (
-                  <ListItem
-                    key={href}
-                    sx={{ mr: { md: "16px", lg: "24px" }, p: 0 }}
-                  >
-                    <MuiLink to={href} component={NavLinkAdapter}>
-                      {label}
-                    </MuiLink>
-                  </ListItem>
-                ))}
-              </List>
-              <Box>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <Logo />
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <List
+                  sx={{
+                    display: { xs: "none", md: "flex" },
+                    flexGrow: 1,
+                  }}
+                >
+                  {pages.map(({ href, label }) => (
+                    <ListItem
+                      key={href}
+                      sx={{
+                        mr: { md: "24px" },
+                        p: 0,
+                        "&:last-child": {
+                          mr: 0,
+                        },
+                      }}
+                    >
+                      <MuiLink to={href} component={NavLinkAdapter}>
+                        {label}
+                      </MuiLink>
+                    </ListItem>
+                  ))}
+                </List>
                 <ConnectWalletButton />
-              </Box>
-              <IconButton
-                size="large"
-                onClick={() => setIsNavbarDrawerOpen((prevState) => !prevState)}
-                sx={{
-                  padding: 0,
-                  marginLeft: "16px",
-                  color: "text.primary",
-                  display: { xs: "flex", md: "none" },
-                }}
-              >
-                {isNavbarDrawerOpen ? <CloseIcon /> : <MenuIcon />}
-              </IconButton>
+                <IconButton
+                  size="small"
+                  onClick={() =>
+                    setIsNavbarDrawerOpen((prevState) => !prevState)
+                  }
+                  className="btn-m"
+                  sx={{
+                    padding: 0,
+                    color: "text.primary",
+                    display: { xs: "flex", md: "none" },
+                  }}
+                >
+                  {isNavbarDrawerOpen ? <CloseIcon /> : <MenuIcon />}
+                </IconButton>
+              </div>
             </div>
           </Toolbar>
         </Container>
