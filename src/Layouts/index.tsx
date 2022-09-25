@@ -13,8 +13,9 @@ const Layout: React.FC<LayoutProps> = ({ children, showBackground }) => {
         sx={[
           !!showBackground && {
             minHeight: "100%",
-            background:
-              "url(/assets/images/bg1.jpg) top left / cover no-repeat",
+            background: {
+              md: "url(/assets/images/bg1.jpg) top left / cover no-repeat",
+            },
           },
         ]}
       >

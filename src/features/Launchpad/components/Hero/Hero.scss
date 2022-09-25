@@ -1,0 +1,93 @@
+@import "src/assets/scss/media";
+
+.Hero {
+  padding-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include md {
+    min-height: calc((100vh - 70px) - 20px);
+  }
+  @media (min-width: 1364px) {
+    min-height: calc((100vh - 70px) - 30px);
+  }
+  @include xl {
+    height: calc((100vh - 70px) - 40px);
+    max-height: 915px;
+    min-height: auto;
+  }
+  @media (min-width: 1364px) {
+    min-height: calc((100vh - 70px) - 40px);
+  }
+
+  .head {
+    & > * {
+      text-align: center;
+      @include md {
+        text-align: left;
+      }
+    }
+    .head-p {
+      margin-bottom: 12px;
+      margin-top: 0;
+      background-color: rgb(248, 249, 250);
+      font-weight: 600;
+      background-image: linear-gradient(
+        51.06deg,
+        rgb(181, 202, 239) 0.87%,
+        rgb(181, 202, 239) 25.96%,
+        rgb(186, 197, 238) 49.23%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+    }
+    .head-h1 {
+      background-color: rgb(248, 249, 250);
+      -webkit-text-fill-color: transparent;
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0.8)
+        ),
+        linear-gradient(
+          51.06deg,
+          rgb(147, 88, 247) 0.87%,
+          rgb(123, 120, 242) 25.96%,
+          rgb(97, 151, 238) 49.23%,
+          rgb(69, 181, 233) 74.93%,
+          rgb(16, 215, 226) 97.48%
+        );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+    }
+    .head-h3 {
+      margin: 24px 0px 48px;
+      background-color: rgb(248, 249, 250);
+      -webkit-text-fill-color: transparent;
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0.8)
+        ),
+        linear-gradient(
+          51.06deg,
+          rgb(147, 88, 247) 0.87%,
+          rgb(123, 120, 242) 25.96%,
+          rgb(97, 151, 238) 49.23%,
+          rgb(69, 181, 233) 74.93%,
+          rgb(16, 215, 226) 97.48%
+        );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+    }
+  }
+}

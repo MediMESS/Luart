@@ -1,6 +1,14 @@
 @import "src/assets/scss/breakpoints";
 
-// Tablets and small screens.
+// Small Tablets and orientation portait phones.
+@mixin sm {
+  @media (min-width: $screen-sm) {
+    // Add the styles in here
+    @content;
+  }
+}
+
+// Tablets and small desktop screens.
 @mixin md {
   @media (min-width: $screen-md) {
     // Add the styles in here

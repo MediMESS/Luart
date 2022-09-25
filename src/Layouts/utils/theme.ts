@@ -23,6 +23,45 @@ export const theme = createTheme({
     fontFamily: "'Libre Franklin', 'Roboto', serif",
     fontWeightRegular: 600,
     fontWeightMedium: 700,
+    h3: {
+      fontSize: "16px",
+      lineHeight: "24px",
+      fontWeight: "500",
+      "@media (min-width: 1200px)": {
+        fontSize: "18px",
+        lineHeight: "32px",
+      },
+    },
+    h2: {
+      fontWeight: 700,
+      fontSize: "24px",
+      lineHeight: "32px",
+      "@media (min-width: 992px)": {
+        fontSize: "40px",
+        lineHeight: "60px",
+      },
+    },
+    h1: {
+      fontWeight: 700,
+      fontSize: "28px",
+      lineHeight: "42px",
+      "@media (min-width: 1200px)": {
+        fontSize: "48px",
+        lineHeight: "72px",
+      },
+      "@media (min-width: 1400px)": {
+        color: "purple",
+        fontSize: "56px",
+        lineHeight: "84px",
+      },
+    },
+    h6: {
+      fontSize: "16px",
+      fontWeight: "600",
+      lineHeight: "24px",
+      color: textPrimary,
+      margin: 0,
+    },
   },
   components: {
     MuiAppBar: {
@@ -83,6 +122,19 @@ export const theme = createTheme({
           "&:hover, &.active": {
             color: textPrimary,
           },
+        },
+      },
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          borderColor: "rgba(255, 255, 255, 0.11)",
+          borderWidth: "1px",
+          borderStyle: "solid",
+          borderRadius: "8px",
+          background: "rgba(255, 255, 255, 0.04)",
+          boxShadow: "none",
+          padding: "24px",
         },
       },
     },

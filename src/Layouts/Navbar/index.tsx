@@ -39,6 +39,7 @@ const Navbar = ({ isBlur }: NavbarProps) => {
           color: "text.primary",
           display: "flex",
           minHeight: "70px",
+          p: 0,
         }}
       >
         <Container maxWidth={"lg"} sx={{ height: "100%" }}>

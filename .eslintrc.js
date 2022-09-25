@@ -18,9 +18,10 @@ module.exports = {
   rules: {
     "no-console": "warn",
     "react/display-name": "off",
+    "no-var": "off",
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-empty-function": "off",
-    "jsdoc/require-returns-type": 0,
+    "jsdoc/require-returns-type": "off",
     "jsdoc/require-param-type": "warn",
     "jsdoc/require-description-complete-sentence": "warn",
     "jsdoc/require-description": "warn",

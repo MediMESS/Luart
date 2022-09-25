@@ -15,12 +15,15 @@
     "@types/node": "^16.11.48",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
+    "axios": "^0.27.2",
+    "axios-case-converter": "^0.9.0",
     "eslint-plugin-jsdoc": "^39.3.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "sass": "^1.54.9",
+    "swiper": "^8.4.2",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },
@@ -60,7 +63,11 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.30.1",
     "husky": "^8.0.0",
-    "msw": "^0.44.2",
-    "prettier": "^2.7.1"
+    "msw": "^0.47.3",
+    "prettier": "^2.7.1",
+    "type-fest": "^2.19.0"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }

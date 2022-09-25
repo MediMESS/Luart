@@ -6,6 +6,9 @@ import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import { BrowserRouter as Router } from "react-router-dom"
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { worker } = require("src/mocks/browser")
+worker.start()
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 root.render(
   <React.StrictMode>
