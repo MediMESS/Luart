@@ -5,7 +5,7 @@ import axios from "src/lib/axios"
 /**
  * Mint Endpoint.
  */
-const MINT_ENDPOINT = "/mints"
+const MINT_ENDPOINT = process.env.PUBLIC_URL + "/mints"
 export const useNFTs = () => {
   const [mintList, setMintList] = useState<IMint[] | null>(null)
   const [isMintListLoading, setIsMintListLoading] = useState(false)

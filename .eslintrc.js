@@ -21,8 +21,9 @@ module.exports = {
     "no-var": "off",
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-explicit-any" : "off",
     "jsdoc/require-returns-type": "off",
-    "jsdoc/require-param-type": "warn",
+    "jsdoc/require-param-type": "off",
     "jsdoc/require-description-complete-sentence": "warn",
     "jsdoc/require-description": "warn",
     "prettier/prettier": [

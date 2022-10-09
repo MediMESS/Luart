@@ -138,6 +138,72 @@ export const theme = createTheme({
         },
       },
     },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          "& input": {
+            height: "48px",
+            padding: "12px 16px",
+            background: backgroundPaper,
+            border: "1px solid rgba(255, 255, 255, 0.18)",
+            borderRadius: "6px",
+            fontSize: "16px",
+            boxSizing: "border-box",
+            lineHeight: "24px",
+            cursor: "auto",
+            opacity: "1 !important",
+          },
+          "& .MuiOutlinedInput-notchedOutline": { border: "none" },
+        },
+      },
+    },
+    MuiTypography: {
+      styleOverrides: {
+        body2: {
+          fontSize: "16px",
+          lineHeight: "24px",
+          color: textPrimary,
+          fontWeight: 400,
+          margin: "0px",
+          "@media (min-width: 992px)": {
+            fontSizeAdjust: "18px",
+            lineHeight: "28px",
+          },
+        },
+      },
+    },
+    MuiAlert: {
+      styleOverrides: {
+        root: {
+          background: "rgba(242, 184, 109, 0.18)",
+          borderStyle: "solid",
+          borderWidth: "1px",
+          borderRadius: "6px",
+          padding: "8px 16px",
+          minHeight: "52px",
+          fontSize: "14px",
+          lineHeight: "18px",
+          color: "white",
+          fontWeight: "400",
+          "&.MuiAlert-filledWarning": {
+            borderColor: "rgb(242, 184, 109)",
+          },
+          "&.MuiAlert-filledSuccess": {
+            borderColor: "#2e7d32",
+          },
+        },
+      },
+    },
+    MuiAlertTitle: {
+      styleOverrides: {
+        root: {
+          fontWeight: "600",
+          fontSize: "inherit",
+          lineHeight: "inherit",
+          color: textPrimary,
+        },
+      },
+    },
   },
   palette: {
     primary: {
@@ -166,6 +232,16 @@ export const theme = createTheme({
     background: {
       paper: backgroundPaper,
       default: backgroundDefault,
+    },
+    warning: {
+      dark: "rgb(211, 129, 23)",
+      main: "rgb(242, 184, 109)",
+    },
+    error: {
+      main: "#f44336",
+    },
+    success: {
+      main: "#4caf50",
     },
   },
 })

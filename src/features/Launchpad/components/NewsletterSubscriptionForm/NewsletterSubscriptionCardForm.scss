@@ -1,0 +1,40 @@
+@import "src/assets/scss/media";
+@import "src/assets/scss/colors";
+
+.newsletter-subscription-card-form {
+  margin-top: 48px;
+  form {
+    width: 100%;
+  }
+  .fields {
+    display: flex;
+    width: 100%;
+    margin-bottom: 16px;
+    flex-direction: column;
+    @include md {
+      flex-direction: row;
+    }
+
+    .MuiTextField-root {
+      @include md {
+        width: 312px;
+      }
+    }
+    .MuiButton-root {
+      margin: 16px 0 0;
+      height: 48px;
+      @include md {
+        margin: 0 0 0 16px;
+      }
+    }
+  }
+  .terms-and-conditions {
+    .link {
+      text-decoration: underline;
+      color: $textPrimary;
+      &:hover {
+        color: $textSecondary;
+      }
+    }
+  }
+}

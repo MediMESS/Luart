@@ -145,7 +145,7 @@ export var TEST_MINTS: SnakeCasedProperties<IMint[]> = [
   },
 ]
 export const NftsEndpoints = [
-  rest.get("/mints", (req, res, ctx) => {
+  rest.get(process.env.PUBLIC_URL + "/mints", (req, res, ctx) => {
     return res(ctx.json(TEST_MINTS), ctx.delay(2000), ctx.status(200))
   }),
 ]
