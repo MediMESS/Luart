@@ -14,7 +14,7 @@ import MenuIcon from "@mui/icons-material/Menu"
 import CloseIcon from "@mui/icons-material/Close"
 import MobileNavbarDrawer from "./MobileNavbarDrawer"
 import NavLinkAdapter from "src/components/NavLinkAdapter"
-import { NavbarProps } from "./Navbar.d"
+import { NavbarProps } from "./Navbar"
 import "./Navbar.scss"
 
 const Navbar = ({ isBlur }: NavbarProps) => {

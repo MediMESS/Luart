@@ -28,13 +28,4 @@
       }
     }
   }
-  .terms-and-conditions {
-    .link {
-      text-decoration: underline;
-      color: $textPrimary;
-      &:hover {
-        color: $textSecondary;
-      }
-    }
-  }
 }

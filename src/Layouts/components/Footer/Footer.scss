@@ -1,0 +1,19 @@
+@import "src/assets/scss/media";
+@import "src/assets/scss/colors";
+
+.Footer {
+  border: 0;
+  @include md {
+    padding: 68px 0;
+  }
+  .footer-links {
+    h5 {
+      margin: 0px 0px 8px;
+      border-left: 2px solid $primaryMain;
+      padding-left: 6px;
+    }
+  }
+  .footer-copyright {
+    margin-top: 64px;
+  }
+}

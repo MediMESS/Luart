@@ -20,3 +20,13 @@
 .MuiTouchRipple-root {
   display: none;
 }
+
+// Deactivating input autocomplete ugly fill color.
+// https://stackoverflow.com/a/69364368
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+  background-color: transparent !important;
+}

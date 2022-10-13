@@ -42,7 +42,7 @@ const NewsletterSubscriptionCardForm = ({
                 <Typography variant="body2">
                   I agree to the processing of personal data by Luart for
                   marketing purposes and accept{" "}
-                  <Link href="#" target="_blank" className="link">
+                  <Link className="underline-link" href="#" target="_blank">
                     Terms of Service
                   </Link>
                 </Typography>

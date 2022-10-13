@@ -16,7 +16,7 @@ const newsletterSubscriptionFormSchema = yup.object({
   email: yup.string().required("Email Invalid").email("Email Invalid"),
   termsAndConditions: yup
     .bool()
-    .oneOf([true], "Please agree to the Terms and Conditions"),
+    .oneOf([true], "Please read and accept our Terms of Service"),
 })
 
 const NewsletterSubscriptionCard = () => {

@@ -55,6 +55,19 @@ export const theme = createTheme({
         lineHeight: "84px",
       },
     },
+    h5: {
+      fontSize: "18px",
+      fontWeight: "600",
+      lineHeight: "28px",
+      color: textPrimary,
+      margin: 0,
+      "@media (min-width: 992px)": {
+        fontSize: "16px",
+      },
+      "@media (min-width: 1200px)": {
+        fontSize: "18px",
+      },
+    },
     h6: {
       fontSize: "16px",
       fontWeight: "600",
@@ -122,6 +135,20 @@ export const theme = createTheme({
           "&:hover, &.active": {
             color: textPrimary,
           },
+          "&.underline-link": {
+            textDecoration: "underline",
+            color: textPrimary,
+            "&:hover": {
+              color: textSecondary,
+            },
+          },
+          "&.footer-link": {
+            color: textPrimary,
+            fontWeight: 500,
+            "&:hover": {
+              color: textSecondary,
+            },
+          },
         },
       },
     },
@@ -141,17 +168,24 @@ export const theme = createTheme({
     MuiTextField: {
       styleOverrides: {
         root: {
-          "& input": {
-            height: "48px",
+          "& .MuiInputBase-root": {
             padding: "12px 16px",
+            borderRadius: "6px",
             background: backgroundPaper,
             border: "1px solid rgba(255, 255, 255, 0.18)",
-            borderRadius: "6px",
+            height: "48px",
             fontSize: "16px",
             boxSizing: "border-box",
             lineHeight: "24px",
             cursor: "auto",
             opacity: "1 !important",
+            "&.MuiInputBase-adornedEnd": {
+              paddingRight: 0,
+            },
+            "& input": {
+              padding: 0,
+              outline: "none",
+            },
           },
           "& .MuiOutlinedInput-notchedOutline": { border: "none" },
         },
